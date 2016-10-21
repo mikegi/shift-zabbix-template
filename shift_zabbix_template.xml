@@ -4,31 +4,30 @@
     <date>2016-05-29T10:02:13Z</date>
     <groups>
         <group>
-            <name>Lisk Servers</name>
+            <name>SHIFT Servers</name>
         </group>
     </groups>
     <templates>
         <template>
-            <template>Template App Lisk Service</template>
-            <name>Template App Lisk Service</name>
-            <description>Zabbix Template for monitoring your Lisk Node</description>
-            <groups>
-                <group>
-                    <name>Lisk Servers</name>
+            <template>Template App SHIFT Service</template>
+            <name>Template App SHIFT Service</name>
+            <description>Zabbix Template for monitoring your SHIFT Node</description>
+            <groups>                <group>
+                    <name>SHIFT Servers</name>
                 </group>
             </groups>
             <applications>
                 <application>
-                    <name>Lisk API</name>
+                    <name>SHIFT API</name>
                 </application>
                 <application>
-                    <name>Lisk Log Check</name>
+                    <name>SHIFT Log Check</name>
                 </application>
                 <application>
-                    <name>Lisk Process</name>
+                    <name>SHIFT Process</name>
                 </application>
                 <application>
-                    <name>Lisk Stats</name>
+                    <name>SHIFT Stats</name>
                 </application>
             </applications>
             <items>
@@ -38,7 +37,7 @@
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>grpsum[&quot;{$ZABBIX.GROUP}&quot;,&quot;{$LISK.FORGING}&quot;,last]</key>
+                    <key>grpsum[&quot;{$ZABBIX.GROUP}&quot;,&quot;{$SHIFT.FORGING}&quot;,last]</key>
                     <delay>30</delay>
                     <history>1</history>
                     <trends>365</trends>
@@ -69,7 +68,7 @@
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>Lisk Stats</name>
+                            <name>SHIFT Stats</name>
                         </application>
                     </applications>
                     <valuemap/>
@@ -81,7 +80,7 @@
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>lisk.approval[{$LISK.ADDRESS},{$LISK.PORT}]</key>
+                    <key>shift.approval[{$SHIFT.ADDRESS},{$SHIFT.PORT}]</key>
                     <delay>600</delay>
                     <history>7</history>
                     <trends>365</trends>
@@ -112,7 +111,7 @@
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>Lisk API</name>
+                            <name>SHIFT API</name>
                         </application>
                     </applications>
                     <valuemap/>
@@ -124,7 +123,7 @@
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>lisk.blocks.pm</key>
+                    <key>shift.blocks.pm</key>
                     <delay>60</delay>
                     <history>1</history>
                     <trends>365</trends>
@@ -142,7 +141,7 @@
                     <snmpv3_privpassphrase/>
                     <formula>1</formula>
                     <delay_flex/>
-                    <params>change(&quot;lisk.status.sync[height,{$LISK.PORT}]&quot;)</params>
+                    <params>change(&quot;shift.status.sync[height,{$SHIFT.PORT}]&quot;)</params>
                     <ipmi_sensor/>
                     <data_type>0</data_type>
                     <authtype>0</authtype>
@@ -155,7 +154,7 @@
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>Lisk Stats</name>
+                            <name>SHIFT Stats</name>
                         </application>
                     </applications>
                     <valuemap/>
@@ -167,7 +166,7 @@
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>lisk.forging.status[{$LISK.PUBLICKEY},{$LISK.PORT}]</key>
+                    <key>shift.forging.status[{$SHIFT.PUBLICKEY},{$SHIFT.PORT}]</key>
                     <delay>30</delay>
                     <history>7</history>
                     <trends>365</trends>
@@ -194,11 +193,11 @@
                     <publickey/>
                     <privatekey/>
                     <port/>
-                    <description>It requires user parameter lisk.forging.status[{$PUBLICKEY}], which is defined in userparameter_lisk.conf.</description>
+                    <description>It requires user parameter shift.forging.status[{$PUBLICKEY}], which is defined in userparameter_shift.conf.</description>
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>Lisk API</name>
+                            <name>SHIFT API</name>
                         </application>
                     </applications>
                     <valuemap/>
@@ -210,7 +209,7 @@
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>lisk.missedblocks[{$LISK.ADDRESS},{$LISK.PORT}]</key>
+                    <key>shift.missedblocks[{$SHIFT.ADDRESS},{$SHIFT.PORT}]</key>
                     <delay>30</delay>
                     <history>7</history>
                     <trends>365</trends>
@@ -241,7 +240,7 @@
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>Lisk API</name>
+                            <name>SHIFT API</name>
                         </application>
                     </applications>
                     <valuemap/>
@@ -253,7 +252,7 @@
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>lisk.producedblocks[{$LISK.ADDRESS},{$LISK.PORT}]</key>
+                    <key>shift.producedblocks[{$SHIFT.ADDRESS},{$SHIFT.PORT}]</key>
                     <delay>30</delay>
                     <history>7</history>
                     <trends>365</trends>
@@ -284,7 +283,7 @@
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>Lisk API</name>
+                            <name>SHIFT API</name>
                         </application>
                     </applications>
                     <valuemap/>
@@ -296,7 +295,7 @@
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>lisk.productivity[{$LISK.ADDRESS},{$LISK.PORT}]</key>
+                    <key>shift.productivity[{$SHIFT.ADDRESS},{$SHIFT.PORT}]</key>
                     <delay>600</delay>
                     <history>7</history>
                     <trends>365</trends>
@@ -327,7 +326,7 @@
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>Lisk API</name>
+                            <name>SHIFT API</name>
                         </application>
                     </applications>
                     <valuemap/>
@@ -339,7 +338,7 @@
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>lisk.rank[{$LISK.ADDRESS},{$LISK.PORT}]</key>
+                    <key>shift.rank[{$SHIFT.ADDRESS},{$SHIFT.PORT}]</key>
                     <delay>600</delay>
                     <history>7</history>
                     <trends>365</trends>
@@ -370,7 +369,7 @@
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>Lisk API</name>
+                            <name>SHIFT API</name>
                         </application>
                     </applications>
                     <valuemap/>
@@ -382,7 +381,7 @@
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>lisk.status.sync[blocks,{$LISK.PORT}]</key>
+                    <key>shift.status.sync[blocks,{$SHIFT.PORT}]</key>
                     <delay>60</delay>
                     <history>1</history>
                     <trends>365</trends>
@@ -413,7 +412,7 @@
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>Lisk API</name>
+                            <name>SHIFT API</name>
                         </application>
                     </applications>
                     <valuemap/>
@@ -425,7 +424,7 @@
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>lisk.status.sync[height,{$LISK.PORT}]</key>
+                    <key>shift.status.sync[height,{$SHIFT.PORT}]</key>
                     <delay>60</delay>
                     <history>1</history>
                     <trends>365</trends>
@@ -456,7 +455,7 @@
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>Lisk API</name>
+                            <name>SHIFT API</name>
                         </application>
                     </applications>
                     <valuemap/>
@@ -468,7 +467,7 @@
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>log[{$LISK.APPLOG},[Received new block],,,skip,]</key>
+                    <key>log[{$SHIFT.APPLOG},[Received new block],,,skip,]</key>
                     <delay>60</delay>
                     <history>1</history>
                     <trends>0</trends>
@@ -495,11 +494,11 @@
                     <publickey/>
                     <privatekey/>
                     <port/>
-                    <description>Lisk: New Block</description>
+                    <description>SHIFT: New Block</description>
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>Lisk Log Check</name>
+                            <name>SHIFT Log Check</name>
                         </application>
                     </applications>
                     <valuemap/>
@@ -511,7 +510,7 @@
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>log[{$LISK.LOG},(cause\&quot;:3),,,skip,]</key>
+                    <key>log[{$SHIFT.LOG},(cause\&quot;:3),,,skip,]</key>
                     <delay>60</delay>
                     <history>7</history>
                     <trends>0</trends>
@@ -542,7 +541,7 @@
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>Lisk Log Check</name>
+                            <name>SHIFT Log Check</name>
                         </application>
                     </applications>
                     <valuemap/>
@@ -554,7 +553,7 @@
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>log[{$LISK.LOG},[Failed generate],,,skip,]</key>
+                    <key>log[{$SHIFT.LOG},[Failed generate],,,skip,]</key>
                     <delay>60</delay>
                     <history>7</history>
                     <trends>0</trends>
@@ -581,11 +580,11 @@
                     <publickey/>
                     <privatekey/>
                     <port/>
-                    <description>Lisk: Failed generate block within slot</description>
+                    <description>SHIFT: Failed generate block within slot</description>
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>Lisk Log Check</name>
+                            <name>SHIFT Log Check</name>
                         </application>
                     </applications>
                     <valuemap/>
@@ -597,7 +596,7 @@
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>log[{$LISK.LOG},[Failed to get],,,skip,]</key>
+                    <key>log[{$SHIFT.LOG},[Failed to get],,,skip,]</key>
                     <delay>60</delay>
                     <history>7</history>
                     <trends>0</trends>
@@ -624,11 +623,11 @@
                     <publickey/>
                     <privatekey/>
                     <port/>
-                    <description>Lisk: Failed to get common block</description>
+                    <description>SHIFT: Failed to get common block</description>
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>Lisk Log Check</name>
+                            <name>SHIFT Log Check</name>
                         </application>
                     </applications>
                     <valuemap/>
@@ -640,7 +639,7 @@
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>log[{$LISK.LOG},[Forged new block],,,skip,]</key>
+                    <key>log[{$SHIFT.LOG},[Forged new block],,,skip,]</key>
                     <delay>60</delay>
                     <history>7</history>
                     <trends>0</trends>
@@ -671,7 +670,7 @@
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>Lisk Log Check</name>
+                            <name>SHIFT Log Check</name>
                         </application>
                     </applications>
                     <valuemap/>
@@ -714,14 +713,14 @@
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>Lisk Process</name>
+                            <name>SHIFT Process</name>
                         </application>
                     </applications>
                     <valuemap/>
                     <logtimefmt/>
                 </item>
                 <item>
-                    <name>Process: Lisk Status</name>
+                    <name>Process: SHIFT Status</name>
                     <type>0</type>
                     <snmp_community/>
                     <multiplier>0</multiplier>
@@ -753,11 +752,11 @@
                     <publickey/>
                     <privatekey/>
                     <port/>
-                    <description>Check if Lisk process is still running</description>
+                    <description>Check if SHIFT process is still running</description>
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>Lisk Process</name>
+                            <name>SHIFT Process</name>
                         </application>
                     </applications>
                     <valuemap/>
@@ -767,38 +766,38 @@
             <discovery_rules/>
             <macros>
                 <macro>
-                    <macro>{$LISK.ADDRESS}</macro>
+                    <macro>{$SHIFT.ADDRESS}</macro>
                     <value>YOURFORGINGADDRES</value>
                 </macro>
                 <macro>
-                    <macro>{$LISK.APPLOG}</macro>
-                    <value>/dir/to/lisk/app.log</value>
+                    <macro>{$SHIFT.APPLOG}</macro>
+                    <value>/dir/to/shift/app.log</value>
                 </macro>
                 <macro>
-                    <macro>{$LISK.FORGING}</macro>
-                    <value>lisk.forging.status[{$LISK.PUBLICKEY},{$LISK.PORT}]</value>
+                    <macro>{$SHIFT.FORGING}</macro>
+                    <value>shift.forging.status[{$SHIFT.PUBLICKEY},{$SHIFT.PORT}]</value>
                 </macro>
                 <macro>
-                    <macro>{$LISK.LOG}</macro>
-                    <value>/dir/to/lisk/logs.log</value>
+                    <macro>{$SHIFT.LOG}</macro>
+                    <value>/dir/to/shift/logs.log</value>
                 </macro>
                 <macro>
-                    <macro>{$LISK.PORT}</macro>
+                    <macro>{$SHIFT.PORT}</macro>
                     <value>8000</value>
                 </macro>
                 <macro>
-                    <macro>{$LISK.PUBLICKEY}</macro>
-                    <value>yourliskpublickey</value>
+                    <macro>{$SHIFT.PUBLICKEY}</macro>
+                    <value>yourshiftpublickey</value>
                 </macro>
                 <macro>
                     <macro>{$ZABBIX.GROUP}</macro>
-                    <value>Lisk Servers</value>
+                    <value>SHIFT Servers</value>
                 </macro>
             </macros>
             <templates/>
             <screens>
                 <screen>
-                    <name>Lisk Screen</name>
+                    <name>SHIFT Screen</name>
                     <hsize>2</hsize>
                     <vsize>4</vsize>
                     <screen_items>
@@ -818,8 +817,8 @@
                             <dynamic>0</dynamic>
                             <sort_triggers>0</sort_triggers>
                             <resource>
-                                <name>Lisk Memory Usage</name>
-                                <host>Template App Lisk Service</host>
+                                <name>SHIFT Memory Usage</name>
+                                <host>Template App SHIFT Service</host>
                             </resource>
                             <max_columns>3</max_columns>
                             <application/>
@@ -841,7 +840,7 @@
                             <sort_triggers>0</sort_triggers>
                             <resource>
                                 <name>Forging Enabled</name>
-                                <host>Template App Lisk Service</host>
+                                <host>Template App SHIFT Service</host>
                             </resource>
                             <max_columns>3</max_columns>
                             <application/>
@@ -862,8 +861,8 @@
                             <dynamic>0</dynamic>
                             <sort_triggers>0</sort_triggers>
                             <resource>
-                                <key>lisk.producedblocks[{$LISK.ADDRESS},{$LISK.PORT}]</key>
-                                <host>Template App Lisk Service</host>
+                                <key>shift.producedblocks[{$SHIFT.ADDRESS},{$SHIFT.PORT}]</key>
+                                <host>Template App SHIFT Service</host>
                             </resource>
                             <max_columns>3</max_columns>
                             <application/>
@@ -884,8 +883,8 @@
                             <dynamic>0</dynamic>
                             <sort_triggers>0</sort_triggers>
                             <resource>
-                                <key>lisk.missedblocks[{$LISK.ADDRESS},{$LISK.PORT}]</key>
-                                <host>Template App Lisk Service</host>
+                                <key>shift.missedblocks[{$SHIFT.ADDRESS},{$SHIFT.PORT}]</key>
+                                <host>Template App SHIFT Service</host>
                             </resource>
                             <max_columns>3</max_columns>
                             <application/>
@@ -906,8 +905,8 @@
                             <dynamic>0</dynamic>
                             <sort_triggers>0</sort_triggers>
                             <resource>
-                                <key>lisk.approval[{$LISK.ADDRESS},{$LISK.PORT}]</key>
-                                <host>Template App Lisk Service</host>
+                                <key>shift.approval[{$SHIFT.ADDRESS},{$SHIFT.PORT}]</key>
+                                <host>Template App SHIFT Service</host>
                             </resource>
                             <max_columns>3</max_columns>
                             <application/>
@@ -928,8 +927,8 @@
                             <dynamic>0</dynamic>
                             <sort_triggers>0</sort_triggers>
                             <resource>
-                                <key>lisk.rank[{$LISK.ADDRESS},{$LISK.PORT}]</key>
-                                <host>Template App Lisk Service</host>
+                                <key>shift.rank[{$SHIFT.ADDRESS},{$SHIFT.PORT}]</key>
+                                <host>Template App SHIFT Service</host>
                             </resource>
                             <max_columns>3</max_columns>
                             <application/>
@@ -951,7 +950,7 @@
                             <sort_triggers>0</sort_triggers>
                             <resource>
                                 <name>Productivity</name>
-                                <host>Template App Lisk Service</host>
+                                <host>Template App SHIFT Service</host>
                             </resource>
                             <max_columns>3</max_columns>
                             <application/>
@@ -963,9 +962,9 @@
     </templates>
     <triggers>
         <trigger>
-            <expression>{Template App Lisk Service:lisk.missedblocks[{$LISK.ADDRESS},{$LISK.PORT}].change()}&gt;0</expression>
+            <expression>{Template App SHIFT Service:shift.missedblocks[{$SHIFT.ADDRESS},{$SHIFT.PORT}].change()}&gt;0</expression>
             <name>Api: Missed Block on {HOST.NAME}</name>
-            <url>{HOST.NAME}:{$LISK.PORT}</url>
+            <url>{HOST.NAME}:{$SHIFT.PORT}</url>
             <status>0</status>
             <priority>4</priority>
             <description>{$ADDRESS} failed to generate a block on {HOST.NAME}</description>
@@ -973,9 +972,9 @@
             <dependencies/>
         </trigger>
         <trigger>
-            <expression>{Template App Lisk Service:grpsum[&quot;{$ZABBIX.GROUP}&quot;,&quot;{$LISK.FORGING}&quot;,last].last()}&gt;1</expression>
+            <expression>{Template App SHIFT Service:grpsum[&quot;{$ZABBIX.GROUP}&quot;,&quot;{$SHIFT.FORGING}&quot;,last].last()}&gt;1</expression>
             <name>Cluster: Forging Nodes &gt; 1</name>
-            <url>{HOST.NAME}:{$LISK.PORT}</url>
+            <url>{HOST.NAME}:{$SHIFT.PORT}</url>
             <status>0</status>
             <priority>2</priority>
             <description>Forging active on more then 1 node.</description>
@@ -983,9 +982,9 @@
             <dependencies/>
         </trigger>
         <trigger>
-            <expression>{Template App Lisk Service:log[{$LISK.LOG},[Failed generate],,,skip,].nodata(60)}=0</expression>
+            <expression>{Template App SHIFT Service:log[{$SHIFT.LOG},[Failed generate],,,skip,].nodata(60)}=0</expression>
             <name>Log: Failed Generate Block on {HOST.NAME}</name>
-            <url>{HOST.NAME}:{$LISK.PORT}</url>
+            <url>{HOST.NAME}:{$SHIFT.PORT}</url>
             <status>0</status>
             <priority>4</priority>
             <description>Log detected {HOST.NAME} failed to generate a block.</description>
@@ -993,9 +992,9 @@
             <dependencies/>
         </trigger>
         <trigger>
-            <expression>{Template App Lisk Service:log[{$LISK.LOG},(cause\&quot;:3),,,skip,].nodata(60)}=0</expression>
+            <expression>{Template App SHIFT Service:log[{$SHIFT.LOG},(cause\&quot;:3),,,skip,].nodata(60)}=0</expression>
             <name>Log: Fork Detected on {HOST.NAME}</name>
-            <url>{HOST.NAME}:{$LISK.PORT}</url>
+            <url>{HOST.NAME}:{$SHIFT.PORT}</url>
             <status>0</status>
             <priority>4</priority>
             <description/>
@@ -1003,9 +1002,9 @@
             <dependencies/>
         </trigger>
         <trigger>
-            <expression>{Template App Lisk Service:proc.num[,,,node].last(0)}=0</expression>
-            <name>Process: Lisk is not running on {HOST.NAME}</name>
-            <url>{HOST.NAME}:{$LISK.PORT}</url>
+            <expression>{Template App SHIFT Service:proc.num[,,,node].last(0)}=0</expression>
+            <name>Process: SHIFT is not running on {HOST.NAME}</name>
+            <url>{HOST.NAME}:{$SHIFT.PORT}</url>
             <status>0</status>
             <priority>4</priority>
             <description/>
@@ -1013,8 +1012,8 @@
             <dependencies/>
         </trigger>
         <trigger>
-            <expression>{Template App Lisk Service:lisk.blocks.pm.max(600)}=0</expression>
-            <name>Stats: Lisk Block Height on {HOST.NAME} is unchanged for 10 minutes</name>
+            <expression>{Template App SHIFT Service:shift.blocks.pm.max(600)}=0</expression>
+            <name>Stats: SHIFT Block Height on {HOST.NAME} is unchanged for 10 minutes</name>
             <url/>
             <status>0</status>
             <priority>2</priority>
@@ -1050,14 +1049,14 @@
                     <calc_fnc>2</calc_fnc>
                     <type>2</type>
                     <item>
-                        <host>Template App Lisk Service</host>
-                        <key>lisk.forging.status[{$LISK.PUBLICKEY},{$LISK.PORT}]</key>
+                        <host>Template App SHIFT Service</host>
+                        <key>shift.forging.status[{$SHIFT.PUBLICKEY},{$SHIFT.PORT}]</key>
                     </item>
                 </graph_item>
             </graph_items>
         </graph>
         <graph>
-            <name>Lisk Memory Usage</name>
+            <name>SHIFT Memory Usage</name>
             <width>500</width>
             <height>200</height>
             <yaxismin>0.0000</yaxismin>
@@ -1082,7 +1081,7 @@
                     <calc_fnc>2</calc_fnc>
                     <type>0</type>
                     <item>
-                        <host>Template App Lisk Service</host>
+                        <host>Template App SHIFT Service</host>
                         <key>proc.mem[node,,,,rss]</key>
                     </item>
                 </graph_item>
@@ -1114,8 +1113,8 @@
                     <calc_fnc>2</calc_fnc>
                     <type>0</type>
                     <item>
-                        <host>Template App Lisk Service</host>
-                        <key>lisk.productivity[{$LISK.ADDRESS},{$LISK.PORT}]</key>
+                        <host>Template App SHIFT Service</host>
+                        <key>shift.productivity[{$SHIFT.ADDRESS},{$SHIFT.PORT}]</key>
                     </item>
                 </graph_item>
             </graph_items>
