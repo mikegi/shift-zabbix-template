@@ -8,7 +8,7 @@ This is a basic template to get info from your SHIFT node.
 
 Forked from: 
 
-https://github.com/pilldriver/lisk-zabbix-template)
+https://github.com/pilldriver/lisk-zabbix-template
 
 Monitoring information by now:
 
@@ -38,6 +38,9 @@ Monitoring information by now:
 
 Todo:
 * Better included graphs and a extend monitoring screen
+* Port variable in userparameter_shift.conf
+* Netstat checks on shift port
+* Version
 * What else?
 
 Installation on a Zabbix Client
@@ -46,6 +49,8 @@ Installation on a Zabbix Client
 Copy userparameter_shift.conf to /etc/zabbix/zabbix_agentd.d/ - userparameter_shift.conf must
 be updated if you want to use a different port than port 9503
 
+Checking the logfiles requires Active Checks to be configured.
+
 Restart the zabbix-agent
 
 Installation in the Zabbix Server
@@ -53,7 +58,7 @@ Installation in the Zabbix Server
 
 In your Zabbix frontend: Configuration-Templates section, Import bottom in the right.
 
-Choose the XML file (for server installation: lisk_zabbix_template.xml) and import it.
+Choose the XML file (for server installation: shift_zabbix_template.xml) and import it.
 
 Apply this new template to your SHIFT servers. 
 
@@ -73,9 +78,9 @@ Go to the Macros section and fill in the details where needed
 * {$SHIFT.PUBLICKEY} <- Your SHIFT publicKey from your Forging account
 * {$ZABBIX.GROUP} <- The zabbix groupname of your SHIFT Servers
 
-
 Requirements on your SHIFT node
 ------------------------------
+
 
 Debian / Ubuntu / Raspbian
 ```
